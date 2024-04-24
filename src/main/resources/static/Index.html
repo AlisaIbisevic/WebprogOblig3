@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kinobilletter</title>
+    <script src="Kinobilletter.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Kinobilletter</h3>
+            <form class="form">
+                <div class="form-group">
+                    <label for="film">Film:</label>
+                        <select id="film" class="form-control">
+                            <option value="">Velg en film</option>
+                            <option value="Oppenheimer">Hulk</option>
+                            <option value="Marvel">Marvel</option>
+                            <option value="Barbie">Barbie</option>
+                        </select>
+                    <span id="film-error" class="error-message"></span>
+                </div>
+
+                    <div class="form-group">
+                        <label for="navn">Navn:</label>
+                        <input type="text" class="form-control" id="navn">
+                        <span id="navn-error" class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefon">Telefon:</label>
+                        <input type="text" class="form-control" id="telefon" >
+                        <span id="telefon-error" class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="epost">E-post:</label>
+                        <input type="email" class="form-control" id="epost" >
+                        <span id="epost-error" class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="antall">Antall billetter:</label>
+                        <input type="number" class="form-control" id="antall" min="1" >
+                        <span id="antall-error" class="error-message"></span>
+                    </div>
+                </form>
+                    <button onclick="regKunde()">Kjøp billett</button>
+            </div>
+            <div class="col-md-8">
+                <h2> Alle billetter</h2>
+                <span id="billettListe"></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
